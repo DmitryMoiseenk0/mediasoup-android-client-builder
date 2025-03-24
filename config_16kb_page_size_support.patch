@@ -1,0 +1,19 @@
+diff --git a/config/android/BUILD.gn b/config/android/BUILD.gn
+index 9e481132f..c035865a6 100644
+--- a/config/android/BUILD.gn
++++ b/config/android/BUILD.gn
+@@ -39,13 +39,7 @@ config("compiler") {
+     # http://crbug.com/448386
+     "-Wl,--exclude-libs=libvpx_assembly_arm.a",
+   ]
+-
+-  if (current_cpu == "arm64") {
+-    # Reduce the page size from 65536 in order to reduce binary size slightly
+-    # by shrinking the alignment gap between segments. This also causes all
+-    # segments to be mapped adjacently, which breakpad relies on.
+-    ldflags += [ "-Wl,-z,max-page-size=4096" ]
+-  }
++
+
+   if (current_cpu == "arm64") {
+     if (arm_control_flow_integrity == "standard") {

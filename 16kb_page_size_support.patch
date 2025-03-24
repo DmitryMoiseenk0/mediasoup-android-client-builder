@@ -1,0 +1,12 @@
+diff --git a/sdk/android/BUILD.gn b/sdk/android/BUILD.gn
+index b0598b4d4e..5b41d988a7 100644
+--- a/sdk/android/BUILD.gn
++++ b/sdk/android/BUILD.gn
+@@ -131,6 +131,7 @@ if (is_android) {
+     ldflags = [
+       "-lEGL",
+       "-Wl,--build-id",
++      "-Wl,-z,max-page-size=16384"
+     ]
+ 
+     deps = [

@@ -27,3 +27,10 @@ git apply $SCRIPT_DIR/use_custom_libcxx_argument_build_support.patch
 echo "Apply support default audio device module patch"
 cd $SCRIPT_DIR/webrtc_android/src
 git apply $SCRIPT_DIR/support_default_audio_device_module_for_webrtc_voice_engine.patch
+
+# 16 KB page size support
+echo "Apply support 16kb page siZe patches"
+cd $SCRIPT_DIR/webrtc_android/src
+git apply $SCRIPT_DIR/16kb_page_size_support.patch
+cd $SCRIPT_DIR/webrtc_android/src/build
+git apply $SCRIPT_DIR/config_16kb_page_size_support.patch
