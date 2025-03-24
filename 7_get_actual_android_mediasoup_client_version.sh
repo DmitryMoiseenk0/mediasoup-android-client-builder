@@ -9,7 +9,7 @@ else
     git config --global http.postBuffer 157286400
     
     echo "Mediasoup-client-android downloading"
-    git clone https://github.com/foxaice/mediasoup-client-android.git
+    git clone https://github.com/DmitryMoiseenk0/mediasoup-client-android.git
 fi
 
 cd $SCRIPT_DIR/mediasoup-client-android
